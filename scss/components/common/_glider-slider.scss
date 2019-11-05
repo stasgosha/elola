@@ -1,0 +1,80 @@
+.glider-slider{
+	position: relative;
+
+	&.slider-default-paddings{
+		width: calc(100% + 20px);
+		margin: -20px -10px;
+
+		.slide{
+			padding: 20px 10px;
+		}
+
+		@media screen and (max-width: 1199px){
+			width: calc(100% + 10px);
+			margin-left: -5px;
+			margin-right: -5px;
+
+			.slide{
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+		}
+	}
+
+	.glider-arrow{
+		top: 50%;
+		transform: translateY(-50%);
+		width: 31px;
+		height: 31px;
+		border-radius: 50%;
+		background: $orange;
+		color: #fff;
+		font-size: 22px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		appearance: none;
+		position: absolute !important;
+
+		&:after{
+			content: '';
+			display: block;
+			width: 8px;
+			height: 8px;
+			border-bottom: 2px solid #fff;
+			border-left: 2px solid #fff;
+			box-sizing: border-box;
+		}
+
+		&:before{
+			border-radius: 50%;
+		}
+
+		&:hover,
+		&:focus{
+			background: darken($orange, 10%);
+		}
+
+		&.glider-prev{
+			left: -45px;
+
+			&:after{
+				transform: translate(1px, -1px) rotate(45deg);
+			}
+		}
+
+		&.glider-next{
+			right: -45px;
+			left: auto;
+
+			&:after{
+				border-left: 0;
+				border-right: 2px solid #fff;
+				transform: translate(-1px, -1px) rotate(-45deg);
+			}
+		}
+
+		@include addFocusBorder(#fff, 0px);
+	}
+}

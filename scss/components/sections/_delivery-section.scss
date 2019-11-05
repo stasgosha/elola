@@ -1,0 +1,26 @@
+.delivery-section{
+	position: relative;
+	padding-bottom: 250px;
+
+	.section-image{
+		margin-top: -85px;
+
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.section-bottom-bg{
+		position: absolute;
+		width: 1920px;
+		left: 50%;
+		bottom: 0;
+		transform: translateX(-50%);
+
+		@media screen and (max-width: 1199px){
+			left: 60%;
+		}
+	}
+}

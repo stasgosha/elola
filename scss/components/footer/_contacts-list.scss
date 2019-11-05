@@ -1,0 +1,67 @@
+.contacts-list{
+	margin-top: 20px;
+
+	.item{
+		display: flex;
+		margin-bottom: 30px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		.item-icon{
+			width: 20px;
+			height: 20px;
+			fill: $primary;
+			flex: none;
+			margin-right: 8px;
+		}
+
+		.item-content{
+			a{
+				color: #3b3b3b;
+				text-decoration: none;
+
+				&:hover{
+					color: $primary;
+				}
+
+				@include addFocusBorder($primary);
+			}
+		}
+
+		.item-name{
+			margin-bottom: 30px;
+			font-size: 15px;
+			line-height: 18px;
+			margin-bottom: 5px;
+			color: #3b3b3b;
+			font-weight: bold;
+		}
+
+		p{
+			font-size: 15px;
+			line-height: 18px;
+			color: #3b3b3b;
+		}
+	}
+
+	.phones-list{
+		display: flex;
+		list-style: none;
+		margin-left: -10px;
+		margin-bottom: -10px;
+		flex-wrap: wrap;
+
+		li{
+			padding-left: 5px;
+			font-size: 15px;
+			line-height: 18px;
+			margin-bottom: 10px;
+		}
+
+		a{
+			@include addFocusBorder($primary);
+		}
+	}
+}

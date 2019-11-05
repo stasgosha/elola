@@ -1,0 +1,24 @@
+.about-section{
+	padding: 70px 0 45px;
+
+	.section-row{
+		display: flex;
+		width: calc(100% + 50px);
+		margin-left: -25px;
+		margin-right: -25px;
+		margin-bottom: 35px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		.row-block{
+			padding: 0 25px;
+			width: 44.348%;
+
+			&.wide{
+				width: calc(100% - 44.348%);
+			}
+		}
+	}
+}

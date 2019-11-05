@@ -1,0 +1,73 @@
+// $colors: (
+// 	white: #fff,
+// 	text: $text-color,
+// 	accent: $accent,
+// 	primary: $primary,
+// );
+
+// blue: $blue,
+// orange: $orange,
+// dark: $text-dark
+
+// @each $i in $colors{
+// 	$color-key: nth($i, 1);
+// 	$color-value: nth($i, 2);
+
+// 	&.color-#{$color-key}{
+// 		color: $color-value !important;
+// 	}
+// }
+
+@mixin addFocusBorder($color: #fff, $size: 8px){
+	position: relative;
+	z-index: 2;
+
+	&:focus{
+		outline: none;
+
+		&:before{
+			content: '';
+			display: block;
+			width: calc(100% + #{$size});
+			height: calc(100% + #{$size});
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			z-index: -1;
+			border: 2px solid $color;
+		}
+	}
+}
+
+.push{
+	position: relative;
+}
+
+.flex-center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-right{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.object-fit-cover{
+	object-fit: cover;
+	font-family: 'object-fit: cover;';
+}
+
+.rounded-image{
+	height: 100%;
+	display: block;
+
+	img{
+		border-radius: 33px;
+		width: 100%;
+		height: 100%;
+	}
+}

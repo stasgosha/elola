@@ -1,0 +1,25 @@
+// Panel
+.panel{
+	overflow: hidden;
+	height: 100vh;
+	background: #ccc;
+	position: relative;
+	z-index: 1000;
+
+	.panel-inner{
+		padding: 20px 0;
+		height: 100vh;
+		overflow-y: auto;
+		overflow-x: hidden !important;
+	}
+
+	.panel-nav{
+		list-style: none;
+		width: 100%;
+		padding: 0 15px;
+	}
+
+	.panel-content{
+		padding: 0 15px;
+	}
+}

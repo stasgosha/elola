@@ -1,0 +1,47 @@
+.language-select{
+	list-style: none;
+	display: flex;
+	margin-bottom: 20px;
+
+	li{
+		display: flex;
+
+		&:after{
+			content: '  |  ';
+			color: #b6d8ec;
+			display: block;
+			transform: translateY(-2px);
+		}
+
+		&:last-child{
+			&:after{
+				display: none;
+			}
+		}
+
+		a{
+			display: block;
+			font-size: 14px;
+			line-height: 20px;
+			color: #b6d8ec;
+			text-transform: uppercase;
+
+			&:hover{
+				color: #fff;
+			}
+
+			@include addFocusBorder();
+
+			&:focus{
+				color: #fff;
+			}
+		}
+
+		&.current-menu-item{
+			a{
+				cursor: default;
+				color: #fff;
+			}
+		}
+	}
+}

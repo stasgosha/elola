@@ -1,0 +1,32 @@
+.socials-list{
+	list-style: none;
+	display: flex;
+
+	li{
+		margin-right: 12px;
+
+		&:last-child{
+			margin-right: 0;
+		}
+
+		a{
+			display: block;
+
+			.icon{
+				width: 18px;
+				height: 18px;
+				display: block;
+				fill: #fff;
+				transition: fill $t;
+			}
+
+			@include addFocusBorder();
+
+			&:hover{
+				.icon{
+					fill: $orange;
+				}
+			}
+		}
+	}
+}

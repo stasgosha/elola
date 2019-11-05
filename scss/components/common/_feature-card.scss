@@ -1,0 +1,32 @@
+.feature-card{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.card-icon{
+		width: 82px;
+		height: 71px;
+		margin-bottom: 25px;
+		flex: none;
+		fill: #fff;
+	}
+
+	.card-content{
+		text-align: center;
+
+		p{
+			font-size: 15px;
+			line-height: 18px;
+			color: #fff;
+			margin-bottom: 5px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			strong{
+				font-weight: 900;
+			}
+		}
+	}
+}
