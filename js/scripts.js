@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+	new WOW().init({
+		mobile: false,
+		offset: 200
+	});
 
 	window.addEventListener('scroll', () => {
 		let header = document.querySelector('.header');
@@ -12,7 +16,27 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	// parallax scroll effect
-	addParallaxBg('.first-screen-section .branding-image', 0.5);
+	setTimeout(() => {
+		addParallaxBg('.first-screen-section .branding-image', 0.5);
+
+		document.querySelectorAll('.with-parallax')
+			.forEach(item => {
+				let direction = 0.5;
+				if (item.dataset.direction !== undefined) {
+					direction = item.dataset.direction;
+				}
+
+				window.addEventListener('scroll', e => {
+					let elOffsetTop = getCoords(item).top;
+
+					let difference = scrollY - elOffsetTop;
+					var half = scrollY * direction + 'px',
+					transform = `translate3d(0, ${half}, 0)`;
+
+					item.style.transform = transform;
+				});
+			});
+	}, 500);
 
 	// parallax.js
 	if (document.body.clientWidth >= 992) {
@@ -30,6 +54,17 @@ document.addEventListener('DOMContentLoaded', () => {
 				e.preventDefault();
 			});
 		})
+
+	// Mobile Bg
+	if (document.body.clientWidth < 992) {
+		document.querySelectorAll('[data-mobileBg]')
+			.forEach(el => {
+				let mobileBg = el.dataset.mobilebg;
+
+				el.style.cssText = mobileBg;
+			})
+	}
+
 });
 
 function getCoords(elem) {
@@ -79,6 +114,12 @@ window.addEventListener('load', () => {
 			next: '.glider-next'
 		},
 		responsive:[
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
 			{
 				breakpoint: 768,
 				settings: {

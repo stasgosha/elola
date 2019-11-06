@@ -92,7 +92,51 @@
 
 			.branding-image{
 				right: -350px;
-				top: -40px;
+				top: -70px;
+
+				picture{
+					transform: scale(0.95);
+					transform-origin: right top;
+				}
+			}
+		}
+
+		@media screen and (max-width: 767px){
+			.branding-image{
+				display: none;
+			}
+
+			.branging-content{
+				width: 100%;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.branding-footer{
+				flex-direction: column;
+
+				.item{
+					margin-right: 0;
+					margin-bottom: 25px;
+
+					&:last-child{
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
+		@media screen and (max-width: 575px){
+			padding-top: 135px;
+
+			.branding-text{
+				p{
+					max-width: 320px;
+					font-size: 14px;
+					line-height: 20px;
+				}
 			}
 		}
 	}
@@ -107,11 +151,71 @@
 		position: relative;
 	}
 
-	@media screen and (min-width: 992px) and (max-width: 1092px){
-		.section-features,
+	@media screen and (min-width: 992px) and (max-width: 1062px),
+		   screen and (min-width: 768px) and (max-width: 838px),
+		   screen and (max-width: 646px){
 		.section-products{
-			padding-left: 50px;
-			padding-right: 50px;
+			padding-left: 35px;
+			padding-right: 35px;
+		}
+
+		.glider-arrow{
+			&.glider-prev{
+				left: -35px !important;
+			}
+
+			&.glider-next{
+				right: -35px !important;
+			}
+		}
+	}
+
+	.flying-objects{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+
+		.parallax-layer{
+			top: auto !important;
+		}
+
+		.cheese-1{
+			position: absolute !important;
+			top: 60px !important;
+			left: -23vw !important;
+		}
+
+		.cheese-2{
+			position: absolute !important;
+			bottom: 250px !important;
+			left: calc(100% + 13vw) !important;
+		}
+
+		.cheese-3{
+			position: absolute !important;
+			left: -60px !important;
+			bottom: 160px !important;
+		}
+
+		.parsley-1{
+			position: absolute !important;
+			top: 320px !important;
+			left: -13vw !important;
+		}
+
+		.parsley-2{
+			position: absolute !important;
+			top: 330px !important;
+			left: calc(100% + 15vw) !important;
+		}
+
+		.jug-1{
+			position: absolute !important;
+			bottom: 90px !important;
+			left: -360px !important;
 		}
 	}
 }

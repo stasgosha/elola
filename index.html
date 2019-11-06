@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Главная | Элола</title>
 	<link rel="stylesheet" href="css/glider.min.css">
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -26,7 +27,7 @@
 									<li><a href="#">En</a></li>
 								</ul>
 								<div class="header-contacts-list">
-									<div class="item">
+									<div class="item sm-hidden">
 										<svg class="item-icon" viewBox="0 0 20 20">
 											<use xlink:href="img/icons/icons.svg#location"></use>
 										</svg>
@@ -53,7 +54,7 @@
 											<p><a href="tel:+79163000874">+7(916)-300-08-74</a></p>
 										</div>
 									</div>
-									<div class="item blue">
+									<div class="item blue sm-hidden">
 										<svg class="item-icon" viewBox="0 0 20 20">
 											<use xlink:href="img/icons/icons.svg#envelope"></use>
 										</svg>
@@ -123,11 +124,11 @@
 					<div class="container">
 						<div class="section-branding">
 							<div class="branging-content">
-								<div class="branding-text tpg">
+								<div class="branding-text tpg wow fadeInUp">
 									<h1>Воплощение лучших <br>сыродельных традиций</h1>
 									<p>За 15 лет существования «Элола» добилась высоких производственный показателей. Мы реализуем товары оптом по всей России и странам СНГ.</p>
 								</div>
-								<div class="branding-footer">
+								<div class="branding-footer wow fadeInUp" data-wow-delay="0.2s">
 									<div class="item">
 										<button class="btn">Сделать заказ</button>
 									</div>
@@ -158,7 +159,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="branding-image">
+							<div class="branding-image wow fadeInRight">
 								<picture>
 									<source srcset="img/first-screen/cheese-and-milk.webp" type="image/webp" />
 									<img src="img/first-screen/cheese-and-milk.png" alt="Сыр в молоке">
@@ -166,8 +167,8 @@
 							</div>
 						</div>
 						<div class="section-features">
-							<div class="cards-list columns-4">
-								<div class="item">
+							<div class="cards-list columns-4 sm-columns-2 xs-small-gutter">
+								<div class="item wow fadeIn" data-wow-delay="0">
 									<div class="feature-card">
 										<svg class="card-icon" viewBox="0 0 82 71">
 											<use xlink:href="img/icons/icons.svg#mountains"></use>
@@ -178,7 +179,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="item">
+								<div class="item wow fadeIn" data-wow-delay="0.2s">
 									<div class="feature-card">
 										<svg class="card-icon" viewBox="0 0 82 71">
 											<use xlink:href="img/icons/icons.svg#milk-products"></use>
@@ -189,7 +190,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="item">
+								<div class="item sm-hidden wow fadeIn" data-wow-delay="0.4s">
 									<div class="feature-card">
 										<svg class="card-icon" viewBox="0 0 82 71">
 											<use xlink:href="img/icons/icons.svg#warranty"></use>
@@ -200,7 +201,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="item">
+								<div class="item sm-hidden wow fadeIn" data-wow-delay="0.6s">
 									<div class="feature-card">
 										<svg class="card-icon" viewBox="0 0 82 71">
 											<use xlink:href="img/icons/icons.svg#cheese"></use>
@@ -213,7 +214,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="section-products">
+						<div class="section-products wow fadeInUp">
 							<div class="products-slider glider-slider slider-default-paddings">
 								<div class="glider-contain">
 									<div class="slide">
@@ -311,8 +312,70 @@
 								<button role="button" aria-label="Предыдущие" class="glider-arrow glider-prev"></button>
 								<button role="button" aria-label="Следующие" class="glider-arrow glider-next"></button>
 							</div>
-							<div class="flex-center">
+							<div class="flex-center sm-hidden">
 								<a href="#" class="btn">Перейти в каталог</a>
+							</div>
+						</div>
+						<div class="flying-objects">
+							<div class="parallax-layer cheese-1">
+								<div class="fadeInDownBig animated" style="animation-delay: 0.45s">
+									<img
+										src="img/flying/cheese-1.png"
+										alt="" 
+										class="with-parallax"
+										data-direction="0.15"
+									>
+								</div>
+							</div>
+							<div class="parallax-layer cheese-2">
+								<div class="fadeInDownBig animated" style="animation-delay: 0.25s">
+									<img
+										src="img/flying/cheese-2.png"
+										alt="" 
+										class="with-parallax"
+										data-direction="0.15"
+									>
+								</div>
+							</div>
+							<div class="parallax-layer cheese-3">
+								<div class="fadeInDownBig animated" style="animation-delay: 0.5s">
+									<img
+										src="img/flying/cheese-3.png"
+										alt="" 
+										class="with-parallax"
+										data-direction="0.2"
+									>
+								</div>
+							</div>
+							<div class="parallax-layer parsley-1">
+								<div class="fadeInDownBig animated" style="animation-delay: 0.2s">
+									<img
+										src="img/flying/parsley-1.png"
+										alt="" 
+										class="with-parallax"
+										data-direction="0.2"
+									>
+								</div>
+							</div>
+							<div class="parallax-layer parsley-2">
+								<div class="fadeInDownBig animated" style="animation-delay: 0.18s">
+									<img
+										src="img/flying/parsley-2.png"
+										alt="" 
+										class="with-parallax"
+										data-direction="0.18"
+									>
+								</div>
+							</div>
+							<div class="parallax-layer jug-1" data-depth="0.7">
+								<div class="fadeInDownBig animated" style="animation-delay: 0.3s">
+									<img
+										src="img/flying/jug-1.png"
+										alt="" 
+										class="with-parallax"
+										data-direction="0.2"
+									>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -320,17 +383,20 @@
 
 				<section class="about-section">
 					<div class="container">
-						<div class="section-row">
-							<div class="row-block wide">
+						<div class="section-row md-column">
+							<div class="row-block wide wow fadeIn">
 								<div class="section-text tpg">
 									<h2>О нашей компании</h2>
 									<p>Компания «Элола» была основана в 1999 г. В селе Веришен область Сюник. Около 16 лет компания верна своей выбранной политике и производит высококачественные молочные продукты исключительно из чистого молока. На сегодняшний день существуют много компаний которые занимаются молочным производством, но необходимо отделить компанию Элола которая имеет все характеристики, чтобы считаться лучшим. </p>
 									<p>Компания начала свою основную деятельность принимая свежее молоко от юридических и физических лиц. Затем приводя множество технологических процессов , получила весьма успешные, питательные и здоровые молочные продукты и сейчас имеет свои собственные коровы. Продукты компании «Элола» сделанные из натуральных </p>
 								</div>
 							</div>
-							<div class="row-block">
+							<div class="row-block wow fadeIn">
 								<a href="https://www.youtube.com/watch?v=Xa0Q0J5tOP0" data-fslightbox class="video-card">
-									<div class="card-bg" style="background-image: url(img/about/video-preview.jpg);"></div>
+									<div class="card-bg"
+										style="background-image: url(img/about/video-preview.jpg);"
+										data-mobileBg="background-image: url(img/about/video-preview-mobile.jpg);"
+									></div>
 									<div class="card-content">
 										<svg class="play-icon" viewBox="0 0 72 72">
 											<use xlink:href="img/icons/icons.svg#play"></use>
@@ -340,8 +406,8 @@
 								</a>
 							</div>
 						</div>
-						<div class="section-row">
-							<div class="row-block wide">
+						<div class="section-row md-column reverse">
+							<div class="row-block wide wow fadeIn">
 								<div class="advantages-list">
 									<div class="item">
 										<div class="advantages-card">
@@ -378,7 +444,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="row-block">
+							<div class="row-block wow fadeIn">
 								<div class="section-text tpg">
 									<h3>Элола - настоящий сыр из&nbsp;Армении</h3>
 									<p>Компания имеет высокотехнологическое оборудование и опытные эксперты, каждый из которых делает порученный ему производственных процесс в результате чего готовый продукт имеет высокое качество и домашний вкус. Не смотря на это компания постоянно делает инвестиции в развитие производства и продвижение с целью открытия новых рабочих мест. Компания имеет высокотехнологическое оборудование и опытные эксперты, каждый из которых делает порученный ему производственных процесс</p>
@@ -386,13 +452,13 @@
 							</div>
 						</div>
 						<div class="section-row">
-							<div class="row-block wide">
+							<div class="row-block wide wow fadeIn">
 								<div class="section-text tpg">
 									<h3>О производстве</h3>
 									<p>Компания имеет высокотехнологическое оборудование и опытные эксперты, каждый из которых делает порученный ему производственных процесс в результате чего готовый продукт имеет высокое качество и домашний вкус. Не смотря на это компания постоянно делает	инвестиции в развитие производства и продвижение с целью открытия новых рабочих мест. Компания имеет высокотехнологическое оборудование и опытные эксперты, каждый из которых делает порученный ему производственных процесс в результате чего готовый продукт имеет высокое качество и домашний вкус. Не смотря на это компания постоянно делает	инвестиции в развитие производства и продвижение с целью открытия новых рабочих мест.</p>
 								</div>
 							</div>
-							<div class="row-block">
+							<div class="row-block wow fadeIn">
 								<picture class="rounded-image">
 									<source srcset="img/about/manufacture.webp" type="image/webp">
 									<img src="img/about/manufacture.jpg" alt="Производство" class="object-fit-cover">
@@ -407,12 +473,14 @@
 						<div class="section-caption">
 							<h2 class="sc-title">Доставляем продукцию <br>по всей России</h2>
 						</div>
-						<picture class="section-image">
+						<picture class="section-image wow fadeIn">
 							<source srcset="img/delivery-map.webp" type="image/webp" />
 							<img src="img/delivery-map.png" alt="Карта России">
 						</picture>
 					</div>
 					<picture class="section-bottom-bg">
+						<source srcset="img/backgrounds/cows-bg-mobile.webp" type="image/webp" media="(max-width: 799px)"/>
+						<source srcset="img/backgrounds/cows-bg-mobile.png" type="image/png" media="(max-width: 799px)"/>
 						<source srcset="img/backgrounds/cows-bg.webp" type="image/webp" />
 						<img src="img/backgrounds/cows-bg.png" alt="Луг с коровами">
 					</picture>
@@ -437,10 +505,10 @@
 					<div class="container">
 						<div class="section-inner">
 							<div class="section-form">
-								<div class="section-caption white">
+								<div class="section-caption white sm-small">
 									<h2 class="sc-title">Будем рады ответить на любые ваши вопросы!</h2>
 								</div>
-								<div class="form questions-form">
+								<div class="form questions-form wow fadeIn">
 									<form action="#">
 										<p>Мы рады, кто ценит натуральную молочную продукцию, и готовы индивидуально обсудить каждый аспект сотрудничества, вне зависимости от размера необходимой Вам партий.</p>
 										<div class="form-row">
@@ -466,7 +534,7 @@
 							</div>
 							<div class="section-founder">
 								<div class="founder-block">
-									<div class="block-image-wrapper" id="parallax-viewport-questions-image" data-friction-x="0.05" data-friction-y="0.05" data-scalar-y="0">
+									<div class="block-image-wrapper wow fadeInUp" id="parallax-viewport-questions-image" data-friction-x="0.05" data-friction-y="0.05" data-scalar-y="0">
 										<div class="parallax-layer" data-depth="0.5">
 											<picture class="block-image">
 												<source srcset="img/questions/manager.webp" type="image/webp" />
@@ -474,10 +542,44 @@
 											</picture>
 										</div>
 									</div>
-									<div class="block-info">
+									<div class="block-info wow fadeInUp" data-wow-delay="0.2s">
 										<p><strong>Фамилия <br>Имя Отчество</strong></p>
 										<p>Основатель компании</p>
 									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flying-objects">
+							<div class="parallax-layer cheese-1" data-depth="0.1">
+								<div class="wow fadeInDownBig" data-wow-delay="0.45s">
+									<img
+										src="img/flying/cheese-1.png"
+										alt=""
+									>
+								</div>
+							</div>
+							<div class="parallax-layer cheese-2" data-depth="0.2">
+								<div class="wow fadeInDownBig" data-wow-delay="0.25s">
+									<img
+										src="img/flying/cheese-2.png"
+										alt=""
+									>
+								</div>
+							</div>
+							<div class="parallax-layer parsley-1" data-depth="0.15">
+								<div class="wow fadeInDownBig" data-wow-delay="0.2s">
+									<img
+										src="img/flying/parsley-1.png"
+										alt=""
+									>
+								</div>
+							</div>
+							<div class="parallax-layer parsley-2" data-depth="0.18">
+								<div class="wow fadeInDownBig" data-wow-delay="0.18s">
+									<img
+										src="img/flying/parsley-2.png"
+										alt=""
+									>
 								</div>
 							</div>
 						</div>
@@ -489,13 +591,16 @@
 			<div class="container">
 				<div class="footer-inner">
 					<div class="footer-block">
-						<a href="index.html" class="footer-logo">
-							<img src="img/footer-logo.png" alt="Логотип Элола">
-						</a>
-						<p>Компания «Элола» была основана в 1999 г. В селе Веришен область Сюник. </p>
-						<p>Создание и проджвижение сайта - Stanislav © 2019 Elola.com - Сливки молочный продукт</p>
+						<div class="footer-left-block">
+							<a href="index.html" class="footer-logo">
+								<img src="img/footer-logo.png" alt="Логотип Элола">
+							</a>
+							<div class="block-text">
+								<p>Компания «Элола» была основана в 1999 г. В селе Веришен область Сюник. <br><br>Создание и проджвижение сайта - Stanislav © 2019 Elola.com - Сливки молочный продукт</p>
+							</div>
+						</div>
 					</div>
-					<div class="footer-block">
+					<div class="footer-block about-nav-wrapper">
 						<h3 class="footer-category-caption">О компании</h3>
 						<nav class="footer-nav">
 							<ul>
@@ -510,7 +615,7 @@
 							</ul>
 						</nav>
 					</div>
-					<div class="footer-block">
+					<div class="footer-block sm-hidden">
 						<h3 class="footer-category-caption">Каталог</h3>
 						<nav class="footer-nav">
 							<ul>
@@ -526,7 +631,7 @@
 							</ul>
 						</nav>
 					</div>
-					<div class="footer-block">
+					<div class="footer-block contacts-block-wrapper">
 						<h3 class="footer-category-caption">Контакты</h3>
 						<div class="contacts-list">
 							<div class="item">
@@ -578,6 +683,7 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 	<script src="js/glider.min.js"></script>
 	<script src="js/fslightbox.js"></script>
+	<script src="js/wow.min.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 </html>

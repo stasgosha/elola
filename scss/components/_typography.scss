@@ -7,7 +7,7 @@ body{
 	font-family: $main-font;
 
 	@media screen and (max-width: 575px){
-		font-size: 16px;
+		font-size: 14px;
 	}
 }
 
@@ -22,9 +22,9 @@ body .tpg-body-1,
 		margin-bottom: 0;
 	}
 
-	// @media screen and (max-width: 575px){
-	// 	font-size: 16px;
-	// }
+	@media screen and (max-width: 575px){
+		font-size: 14px;
+	}
 }
 
 .tpg h1,
@@ -46,6 +46,10 @@ body .tpg-body-1,
 	@media screen and (max-width: 991px){
 		font-size: 24px;
 	}
+
+	@media screen and (max-width: 519px){
+		font-size: 20px;
+	}
 }
 
 .tpg h2,
@@ -60,6 +64,11 @@ body .tpg-body-1,
 
 	&:last-child{
 		margin-bottom: 0;
+	}
+
+	@media screen and (max-width: 359px){
+		font-size: 22px;
+		line-height: 23px;
 	}
 }
 
@@ -120,4 +129,22 @@ body .tpg-ul{
 	// 		font-size: 30px;
 	// 	}
 	// }
+
+	@media screen and (max-width: 767px){
+		&.sm-small{
+			.sc-title{
+				font-size: 24px;
+				line-height: 25px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 359px){
+		&.sm-small{
+			.sc-title{
+				font-size: 20px;
+				line-height: 21px;
+			}
+		}
+	}
 }
