@@ -78,6 +78,7 @@
 
 				&:hover .sub-menu,
 				&:focus-within .sub-menu,
+				a:hover + .sub-menu,
 				.sub-menu:hover{
 					transform: translateY(0);
 					opacity: 1;

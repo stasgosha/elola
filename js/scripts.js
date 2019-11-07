@@ -65,6 +65,73 @@ document.addEventListener('DOMContentLoaded', () => {
 			})
 	}
 
+	// Previews
+	function setBigPhotoParams(src, link){
+		let target = document.querySelector('.big-image');
+		target.setAttribute('href', link);
+
+		target.querySelector('img').setAttribute('src', src);
+
+		refreshFsLightbox();
+	}
+
+	document.querySelectorAll('.preview-block')
+			.forEach(el => {
+				el.addEventListener('click', e => {
+					e.preventDefault();
+
+					let img = el.querySelector('img');
+
+					let src = img.dataset.src;
+					let link = img.dataset.bigsrc;
+
+					setBigPhotoParams(src, link);
+
+					document.querySelectorAll('.preview-block')
+						.forEach(item => item.classList.remove('selected'));
+
+					el.classList.add('selected');
+				})
+			});
+
+	document.querySelector('.preview-block').click();
+
+	// Tabs
+	function getSiblings(elem) {
+		let siblings = [];
+		let sibling = elem;
+		while (sibling.previousSibling) {
+			sibling = sibling.previousSibling;
+			sibling.nodeType == 1 && siblings.push(sibling);
+		}
+
+		sibling = elem;
+		while (sibling.nextSibling) {
+			sibling = sibling.nextSibling;
+			sibling.nodeType == 1 && siblings.push(sibling);
+		}
+
+		return siblings;
+	}
+
+	document.querySelectorAll('[data-tab]')
+			.forEach(el => {
+				el.addEventListener('click', e => {
+					e.preventDefault();
+
+					let dest = document.querySelector(el.dataset.tab);
+
+					console.log(document.querySelector(el.dataset.tab));
+
+					dest.classList.add('visible');
+					el.classList.add('current');
+
+					getSiblings(el).forEach(item => { item.classList.remove('current') });
+					getSiblings(dest).forEach(item => { item.classList.remove('visible') });
+				})
+			});
+
+	document.querySelector('.tab-link:first-child').click();
 });
 
 function getCoords(elem) {
@@ -110,8 +177,8 @@ window.addEventListener('load', () => {
 		draggable: true,
 		duration: 1,
 		arrows: {
-			prev: '.glider-prev',
-			next: '.glider-next'
+			prev: '.products-slider .glider-prev',
+			next: '.products-slider .glider-next'
 		},
 		responsive:[
 			{
@@ -133,6 +200,18 @@ window.addEventListener('load', () => {
 				}
 			}
 		]
+	});
+
+	new Glider(document.querySelector('.photos-previews-slider .glider-contain'), {
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		rewind: true,
+		draggable: true,
+		duration: 1,
+		arrows: {
+			prev: '.photos-previews-slider .glider-prev',
+			next: '.photos-previews-slider .glider-next'
+		}
 	});
 });
 

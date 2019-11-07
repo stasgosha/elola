@@ -65,6 +65,18 @@ picture{
 	.footer{
 		flex: none;
 	}
+
+	&.inner-page{
+		padding-top: 192px;
+
+		@media screen and (max-width: 991px){
+			padding-top: 136px;
+		}
+
+		@media screen and (max-width: 575px){
+			padding-top: 111px;
+		}
+	}
 }
 
 .container{
