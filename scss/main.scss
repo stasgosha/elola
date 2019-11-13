@@ -18,6 +18,9 @@
 @import "components/sections/questions-section";
 @import "components/sections/breadcrumbs-section";
 @import "components/sections/product-section";
+@import "components/sections/news-list-section";
+@import "components/sections/contacts-page";
+@import "components/sections/text-page-section";
 
 // Footer
 @import "components/footer/footer";
@@ -34,3 +37,5 @@
 @import "components/common/video-card";
 @import "components/common/advantages-list";
 @import "components/common/menu-opener";
+@import "components/common/pagination";
+@import "components/common/news-card";

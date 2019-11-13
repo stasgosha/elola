@@ -86,8 +86,18 @@ body .tpg-ul{
 	margin-bottom: 1.375em;
 
 	li{
+		padding-left: 15px;
+		position: relative;
+
 		&:before{
-			content: '- ';
+			content: '';
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background: $orange;
+			position: absolute;
+			left: 0;
+			top: 9px;
 		}
 	}
 }
@@ -106,6 +116,7 @@ body .tpg-ul{
 		line-height: 30px;
 		margin-bottom: 20px;
 		font-weight: 900;
+		text-transform: none;
 
 		&:last-child{
 			margin-bottom: 0;

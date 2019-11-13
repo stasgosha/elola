@@ -9,3 +9,41 @@
 // 	height: ;
 // 	background: url(../img/icons/.png) no-repeat center center;
 // }
+
+.icon-chevron-left,
+.icon-chevron-right{
+	display: block;
+	width: 40px;
+	height: 40px;
+	position: relative;
+
+	&:before,
+	&:after{
+		content: '';
+		display: block;
+		width: 12px;
+		height: 2px;
+		transform-origin: 1px 1px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -6px;
+		margin-top: -1px;
+		background: $gray;
+	}
+
+	&:before{
+		transform: rotate(45deg);
+	}
+
+	&:after{
+		transform: rotate(-45deg);
+	}
+}
+
+.icon-chevron-right{
+	&:before,
+	&:after{
+		transform-origin: calc(100% - 1px) 1px;
+	}
+}

@@ -1,0 +1,151 @@
+.text-page-section{
+	padding: 25px 0 150px;
+
+	.section-inner{
+		display: flex;
+		width: calc(100% + calc(15px * 2));
+		margin-left: -15px;
+		margin-right: -15px;
+
+		.section-content,
+		.section-sidebar{
+			padding: 0 15px;
+		}
+
+		.section-content{
+			width: calc(100% - 330px);
+			padding-right: 60px;
+		}
+
+		.section-sidebar{
+			width: 330px;
+		}
+
+		@media screen and (max-width: 991px){
+			flex-direction: column;
+			width: calc(100% + calc(15px * 2));
+
+			.section-content,
+			.section-sidebar{
+				width: 100%;
+			}
+
+			.section-content{
+				margin-bottom: 30px;
+				padding-right: 15px;
+			}
+		}
+	}
+
+	.sidebar-news-list{
+		.item{
+			margin-bottom: 30px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+
+		@media screen and (max-width: 991px){
+			display: flex;
+			width: calc(100% + calc(15px * 2));
+			margin-left: -15px;
+			margin-right: -15px;
+			margin-bottom: -30px;
+
+			.item{
+				width: 50%;
+				margin-bottom: 30px;
+				padding: 0 15px;
+			}
+		}
+
+		@media screen and (max-width: 575px){
+			flex-wrap: wrap;
+
+			.item{
+				width: 100%;
+			}
+		}
+	}
+}
+
+.fslightbox-gallery{
+	display: flex;
+	width: calc(100% + calc(7px * 2));
+	margin-left: -7px;
+	margin-right: -7px;
+	margin-bottom: -7px;
+	flex-wrap: wrap;
+	margin-bottom: 15px;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	.item{
+		padding: 0 7px;
+		margin-bottom: 14px;
+		width: 33.333%;
+
+		a{
+			background: #fff;
+			display: block;
+			position: relative;
+			border-radius: $r;
+			overflow: hidden;
+
+			&:before{
+				content: '';
+				display: block;
+				width: 100%;
+				padding-top: 85.714%;
+				border-radius: $r;
+				transition: all $t;
+				z-index: 2;
+				position: relative;
+			}
+
+			img{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				display: block;
+				left: 0;
+				top: 0;
+			}
+
+			.zoom{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 52px;
+				height: 53px;
+				display: block;
+				fill: #fff;
+				transition: all $t;
+				z-index: 3;
+				opacity: 0;
+			}
+
+			&:hover,
+			&:focus{
+				outline: none;
+
+				&:before{
+					background: rgba(#000, .6);
+				}
+
+				.zoom{
+					opacity: 1;
+					transform: translate(-50%, -50%) scale(1.2);
+				}
+			}
+		}
+
+		@media screen and (max-width: 575px){
+			width: 50%;
+		}
+	}
+}
