@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Главная | Элола</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/glider.min.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -131,7 +132,7 @@
 								</div>
 								<div class="branding-footer wow fadeInUp" data-wow-delay="0.2s">
 									<div class="item">
-										<button class="btn">Сделать заказ</button>
+										<button class="btn" data-toggle="modal" data-target="#modal-order">Сделать заказ</button>
 									</div>
 									<div class="item">
 										<ul class="socials-list">
@@ -673,15 +674,146 @@
 			</div>
 		</footer>
 	</div>
-	<!-- <nav id="menu" class="panel">
+	<nav id="menu" class="panel">
 		<div class="panel-inner">
-			<div class="panel-content"></div>
 			<ul class="panel-nav">
-				<li><a href=""></a></li>
+				<li class="menu-item-has-children">
+					<a href="#" class="catalog-link" aria-haspopup="true">
+						<svg class="burger" viewBox="0 0 22 22">
+							<use xlink:href="img/icons/icons.svg#burger"></use>
+						</svg>
+						<span class="link-text">Каталог</span>
+					</a>
+					<ul class="sub-menu orange" aria-label="Подменю">
+						<li><a href="#">Сулугуни</a></li>
+						<li><a href="#">Лори</a></li>
+						<li><a href="#">Чанах</a></li>
+						<li><a href="#">Бруни</a></li>
+						<li><a href="#">ЛОРИ</a></li>
+						<li><a href="#">Мацони</a></li>
+						<li><a href="#">Творог</a></li>
+						<li><a href="#">Сметана</a></li>
+						<li><a href="#">Тан</a></li>
+					</ul>
+				</li>
+				<li class="menu-item-has-children">
+					<a href="#" aria-haspopup="true">О заводе</a>
+					<ul class="sub-menu" aria-label="Подменю">
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Отзывы</a></li>
+						<li><a href="#">Производство</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Новости</a></li>
+				<li><a href="#">Сотрудничество</a></li>
+				<li><a href="#">Как заказать</a></li>
+				<li><a href="#">Доставка</a></li>
+				<li><a href="#">Здоровье</a></li>
+				<li><a href="#">Контакты</a></li>
 			</ul>
+			<div class="panel-content">
+				<div class="panel-contacts-list">
+					<div class="item">
+						<svg class="item-icon" viewBox="0 0 20 20">
+							<use xlink:href="img/icons/icons.svg#location"></use>
+						</svg>
+						<div class="item-text">
+							<p><strong>Адрес компании</strong></p>
+							<p>г. Горис, с. Веришен</p>
+						</div>
+					</div>
+					<div class="item">
+						<svg class="item-icon" viewBox="0 0 20 20">
+							<use xlink:href="img/icons/icons.svg#phone"></use>
+						</svg>
+						<div class="item-text">
+							<p><strong>Телефон</strong></p>
+							<p><a href="tel:+37428424358">+374 284 2 43 58</a></p>
+						</div>
+					</div>
+					<div class="item">
+						<svg class="item-icon" viewBox="0 0 20 20">
+							<use xlink:href="img/icons/icons.svg#phone"></use>
+						</svg>
+						<div class="item-text">
+							<p><strong>Офис в Москве</strong></p>
+							<p><a href="tel:+79163000874">+7(916)-300-08-74</a></p>
+						</div>
+					</div>
+					<div class="item">
+						<svg class="item-icon" viewBox="0 0 20 20">
+							<use xlink:href="img/icons/icons.svg#envelope"></use>
+						</svg>
+						<div class="item-text">
+							<p><strong>Наша почта</strong></p>
+							<p><a href="mailto:info@elola.am">info@elola.am</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</nav> -->
+	</nav>
+
+	<div class="modal fade" tabindex="-1" role="dialog" id="modal-order">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button class="modal-close" data-dismiss="modal" aria-label="Закрыть попап"></button>
+					<div class="section-caption white">
+						<h3 class="sc-title">Сделать заказ</h3>
+					</div>
+					<form action="#" class="modal-form form">
+						<div class="form-fields">
+							<div class="form-row">
+								<div class="form-field">
+									<input type="text" class="input-field rounded" placeholder="Имя">
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-field">
+									<input type="tel" class="input-field rounded" placeholder="Телефон">
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-field">
+									<input type="email" class="input-field rounded" placeholder="E-mail">
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-field">
+									<textarea placeholder="Комментарий" class="rounded"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="form-footer">
+							<button class="btn btn-white">Отправить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade narrow" tabindex="-1" role="dialog" id="modal-success">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button class="modal-close" data-dismiss="modal" aria-label="Закрыть попап"></button>
+					<div class="section-caption white">
+						<h3 class="sc-title">Спасибо!</h3>
+					</div>
+					<div class="sucess-message">
+						<p>Ваша заявка <br>успешно отправлена</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<script src="//cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/bigSlide.min.js"></script>
 	<script src="js/glider.min.js"></script>
 	<script src="js/fslightbox.js"></script>
 	<script src="js/wow.min.js"></script>

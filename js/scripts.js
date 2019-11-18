@@ -94,7 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
 				})
 			});
 
-	document.querySelector('.preview-block').click();
+	let previewBlock = document.querySelector('.preview-block');
+	!!previewBlock && previewBlock.click();
 
 	// Tabs
 	function getSiblings(elem) {
@@ -131,7 +132,27 @@ document.addEventListener('DOMContentLoaded', () => {
 				})
 			});
 
-	document.querySelector('.tab-link:first-child').click();
+	let tablink = document.querySelector('.tab-link:first-child');
+	!!tablink && tablink.click();
+
+	// Mobile Menu
+	$('.panel-nav .menu-item-has-children').click(function(){
+		$(this).toggleClass('opened').find('.sub-menu').stop().slideToggle(300);
+	});
+
+	$('.panel-nav .menu-item-has-children > a').click(function(e){
+		e.preventDefault();
+	})
+
+	$('.panel-nav a').click(function(e){
+		// e.stopPropagation();
+	});
+
+	$('.menu-opener').bigSlide({
+		side: 'right',
+		easyClose: true,
+		menuWidth: '260px'
+	});
 });
 
 function getCoords(elem) {

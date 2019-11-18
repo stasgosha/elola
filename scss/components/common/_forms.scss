@@ -136,15 +136,32 @@
 		&:focus{
 			border-width: 3px 0;
 		}
+
+		&.rounded{
+			height: 50px;
+			border-radius: 25px;
+			border: 2px solid #fff;
+			padding-left: 25px;
+			padding-right: 25px;
+			font-weight: 600;
+		}
 	}
 
 	textarea{
 		height: 85px;
-		padding: 5px 0;
+		padding: 15px 0;
 		resize: none;
 
 		&:focus{
 			padding: 3px 0;
+		}
+
+		&.rounded{
+			height: 100px;
+
+			&:focus{
+				padding: 15px 25px;
+			}
 		}
 	}
 

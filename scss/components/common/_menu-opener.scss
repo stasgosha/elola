@@ -67,6 +67,10 @@
 		position: fixed;
 		right: 15px;
 		top: 15px;
+
+		[style*="right: 260px;"] &{
+			right: 275px;
+		}
 	}
 
 	&.active{

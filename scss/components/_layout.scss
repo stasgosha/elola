@@ -232,3 +232,127 @@ picture{
 		display: none !important;
 	}
 }
+
+.modal{
+	.modal-content{
+		border: 0;
+		border-radius: 33px;
+		background: url(../img/backgrounds/cheese-bg.jpg) no-repeat center center;
+		background-size: cover;
+
+		.modal-body{
+			padding: 45px 35px;
+
+			@media screen and (max-width: 767px){
+				padding: 35px 25px;
+			}
+		}
+	}
+
+	.modal-dialog{
+		margin-top: 60px;
+		max-height: 600px;
+
+		@media screen and (max-width: 575px){
+			width: calc(100% - 30px);
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.modal-close{
+		position: absolute;
+		right: 12px;
+		top: 12px;
+		z-index: 5;
+		cursor: pointer;
+		width: 36px;
+		height: 36px;
+		transition: all $t;
+		appearance: none;
+		background: transparent;
+		border-radius: 50%;
+		border: 2px solid transparent;
+
+		&:before,
+		&:after{
+			content: '';
+			display: block;
+			width: 22px;
+			height: 2px;
+			background: #fff;
+			position: absolute;
+			left: calc(50% - 11px);
+			top: calc(50% - 1px);
+		}
+
+		&:before{
+			transform: rotate(45deg);
+		}
+
+		&:after{
+			transform: rotate(-45deg);
+		}
+
+		&:hover{
+			border-color: #fff;
+		}
+
+		@media screen and (max-width: 767px){
+			width: 30px;
+			height: 30px;
+
+			&:before,
+			&:after{
+				width: 16px;
+				left: calc(50% - 8px);
+			}
+		}
+	}
+
+	.section-caption .sc-title{
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.sucess-message{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		p{
+			font-size: 20px;
+			line-height: 1.3;
+			color: #fff;
+			font-weight: 400;
+			text-align: center;
+			margin-bottom: 0;
+		}
+
+		img{
+			display: block;
+		}
+	}
+
+	.modal-form{
+		.form-fields{
+			margin-bottom: 25px;
+		}
+
+		.form-footer{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.btn{
+				width: 215px;
+			}
+		}
+	}
+
+	&.narrow{
+		.modal-dialog{
+			max-width: 370px;
+		}
+	}
+}
